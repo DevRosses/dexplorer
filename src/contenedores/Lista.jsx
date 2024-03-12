@@ -1,30 +1,23 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useEffect, useContext } from "react";
+import Contexto from "../contexto/Contexto";
 import Pokemon from '../componentes/Pokemon'
 
 function Lista() {
-
-    const [pokemones, setPokemones] = useState([]);
-
-    const traemePokemones = async ()=>{
-        const res = await axios.get('https://pokeapi.co/api/v2/pokemon/')
-        setPokemones(res.data.results)
-    }
+    const { pokemones, traemePokemones } = useContext(Contexto)
 
     useEffect(
         () => {
-            traemePokemones();
+            traemePokemones( );
         }, []);
 
-        console.log('Esta es la lista de pokemones: ', pokemones );
+    return (<>
+        <h2>somos los POKEMONES</h2>
+        <ul>
+            {pokemones.map((pokemon, i) => <Pokemon {...pokemon} key={i}></Pokemon>)}
+        </ul>
 
-    return ( <>
-    <h2>somos los POKEMONES</h2>
-    <ul>
-        {pokemones.map((pokemon) => <Pokemon {...pokemon} Key={pokemon.name}></Pokemon> )}
-    </ul>
-
-    </> );
+    </>);
 }
+
 
 export default Lista;
