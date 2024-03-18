@@ -4,6 +4,8 @@ import Favorito from '../componentes/Favorito';
 
 function Favoritos() {
     const { favoritos } = useContext(Contexto);
+
+    console.log('lo que tiene fav:', favoritos)
     
     return (<>
         <div>

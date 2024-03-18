@@ -9,6 +9,8 @@ function Detalles() {
 
     const traemePokemon = async () => {
 
+        // REVISAR SINO ESTA EN USAR CONTEXTO
+
         //recupero el nombre del pokemon de la URL
         const pedazos = location.pathname.split('/');
         const url = 'https://pokeapi.co/api/v2/pokemon/' + pedazos[2] + '/';

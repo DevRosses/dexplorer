@@ -5,12 +5,14 @@ import Contexto from "../contexto/Contexto";
 // lista de pokemons favoritos
 function Favorito(props) {
     const { name, url } = props;
-    // obteniendo el contexto del provider
-    const contexto = useContext(Contexto);
+
     return (<>
         <li>
      <p>Hola soy un favorito</p>
+     <p>Nombre: {name}</p>
      
+     <img src={pokemon?.sprites.other.dream_world.front_default} alt="" />
+      <img src={url} alt="imagen" /> 
         </li>
 
     </>)

@@ -42,10 +42,10 @@ function usarContexto(props) {
         console.log('eliminaDeFavoritos ANTES: ', state.favoritos)
         // filtramos por id para encontrar al item a borrar 
         const nuevoArreglo = state.favoritos.filter((itemActual) => itemActual.name !== id)
-        console.log('que hace nuevo arreglo', nuevoArreglo)
         dispatch({ type: "ELIMINADE_FAVORITOS", payload: nuevoArreglo })
         console.log('eliminaDeFavoritos DESPUES: ', state.favoritos)
     }
+    
     console.log('guardamePokemon DESPUES: ', state.favoritos)
 
     return (
