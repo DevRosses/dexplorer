@@ -3,6 +3,7 @@ import Home from '../contenedores/Home';
 import Lista from '../contenedores/Lista';
 import Detalle from '../contenedores/Detalles';
 import Favoritos from  '../contenedores/Favoritos';
+import Favorito from "../componentes/Favorito";
 import Layout from "../componentes/Layout";
 import UsarContexto from "../contexto/usaContexto";
 
@@ -16,7 +17,7 @@ function App() {
             <Route path="/pokemones" element={<Lista />}></Route>
             <Route path="/pokemones/*" element={<Detalle />}></Route>
             <Route path="/favoritos" element={<Favoritos />}></Route>
-            <Route path="/*" element={'Error 404'}></Route>
+            <Route path="/favoritos/*" element={<Favorito />}></Route>
           </Routes>
         </Layout>
       </UsarContexto>

@@ -11,14 +11,14 @@ function Pokemon(props) {
     let urlCortada = url.split('/')
 
     const handleGuardar = ()=>{
-        let hijo = {name:name , url:url}
+        let hijo = {name:name , url:url , id:name}
         guardamePokemon( hijo )
     }
 
 
     return (<>
         <li>
-            <Link to={'/pokemones/' + urlCortada[6]} > {name} </Link>
+            <Link to={'/pokemones/'+ urlCortada[6]} > {name} </Link>
             <button onClick={handleGuardar}>Guardar Fav</button>
         </li>
     </>);
