@@ -1,4 +1,5 @@
 import { useEffect, useContext } from "react";
+import '../assets/estilos/lista.css'
 import Contexto from "../contexto/Contexto";
 import Pokemon from '../componentes/Pokemon'
 
@@ -11,11 +12,9 @@ function Lista() {
         }, []);
 
     return (<>
-        <h2>somos los POKEMONES</h2>
-        <ul>
+    <div className="lista">
             {pokemones.map((pokemon, i) => <Pokemon {...pokemon} key={i}></Pokemon>)}
-        </ul>
-
+        </div>
     </>);
 }
 

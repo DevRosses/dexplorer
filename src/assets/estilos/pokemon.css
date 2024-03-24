@@ -1,0 +1,30 @@
+.pokemon {
+  width: 157px;
+  height: 162px;
+  display: flex;
+  flex-direction: column;
+  justify-content:  space-around;
+  align-items: center;
+  background-color: aqua;
+  border-radius: 16px;
+}
+
+.img-pokemon{
+    width: 80%;
+    margin-bottom: 30px;
+    background-color: yellow;
+}
+.nombre-pokemon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 30%;
+    background-color: white;
+}
+
+.fav{
+    height: 32px;
+    cursor: pointer;
+}

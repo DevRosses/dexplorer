@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import Contexto from "../contexto/Contexto";
 import { Link } from "react-router-dom";
+import '../assets/estilos/favorito.css'
 
 
 // lista de pokemons favoritos
@@ -10,8 +11,6 @@ function Favorito(props) {
   
   let urlCortada = url.split('/')
 
-  console.log('lo que tiene la url: ', url)
-
   const handleEliminar = ()=>{
     let hijo = {name:name , url:url ,id:id}
     eliminaDeFavoritos( hijo )
@@ -19,10 +18,10 @@ function Favorito(props) {
 
   return (
     <>
-      <li>
+    <div className="favorito">
       <Link to={'/pokemones/'+ urlCortada[6]} > {name} </Link>
         <button onClick={handleEliminar}>Eliminar Fav</button>
-      </li>
+      </div>
     </>
   );
 }

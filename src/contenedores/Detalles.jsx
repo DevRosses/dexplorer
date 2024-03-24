@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import axios from 'axios';
+import '../assets/estilos/detalles.css'
 
 
 function Detalles() {
@@ -28,12 +29,14 @@ function Detalles() {
 
 
     return (<>
+    <div className="detalles">
         <p>{pokemon?.name}</p>
         <img src={pokemon?.sprites.other.dream_world.front_default} alt="" />
         <h3>Tipo</h3>
         <ul>
             {pokemon?.types.map((tipo, i) => <li key={i}>{tipo.type.name}</li>)}
         </ul> 
+        </div>
     </>)
 }
 

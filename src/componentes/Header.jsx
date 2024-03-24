@@ -1,13 +1,10 @@
-import { Link } from 'react-router-dom';
+import '../assets/estilos/Header.css'
+import Logo from '../assets/estaticos/pokemon.png';
 
 function Header() {
   return (<>
-    <header>
-      <nav>
-      <Link to="/">Home</Link> |
-        <Link to="/pokemones">Pokemones</Link> |
-        <Link to="/favoritos">Favoritos</Link>
-      </nav>
+    <header className='header'>
+      <img className='logo' src= {Logo} alt="" />
     </header>
   </>);
 }

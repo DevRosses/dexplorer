@@ -1,6 +1,7 @@
 const LISTAME_POKEMONES = 'LISTAME_POKEMONES'
 const GUARDAME_POKEMON = 'GUARDAME_POKEMON'
 const ELIMINADE_FAVORITOS = 'ELIMINADE_FAVORITOS'
+const FAVORITOS_RECUPERADOS = 'FAVORITOS_RECUPERADOS'
 
 export default function Reducer(state, action) {
   const { payload, type } = action;
@@ -13,7 +14,10 @@ export default function Reducer(state, action) {
     //con FILTER
     case ELIMINADE_FAVORITOS:
       return { ...state, favoritos: payload };
-default:
-  return state;
+
+    case FAVORITOS_RECUPERADOS:
+      return { ...state, favoritos: payload };
+    default:
+      return state;
   }
 }

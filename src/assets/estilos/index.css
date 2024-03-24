@@ -1,0 +1,22 @@
+:root {
+--backgroundApp: linear-gradient(#FF0000 ,#882727);
+--backgroundCards: linear-gradient(#FFE1C6, #FFCB05);
+--white: #FFF;
+--black: #000;
+--grayLigth: #ebebeb;
+--grayDark: #909090;
+--border1: 30px;
+--layoutWidth: 375px;
+--layoutHeight: 1085px;
+--layoutCardHeight: 158px;
+--layoutCardWidth: 162px;
+--flex-shrink: 0 ;
+font-family: "Roboto", sans-serif;
+font-style: normal;
+}
+
+body{
+    background-color: var(--grayLigth);
+    margin: 0 auto;
+}
+

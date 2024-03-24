@@ -1,0 +1,10 @@
+.favorito{
+    width: 157px;
+    height: 162px;
+    display: flex;
+    flex-direction: column;
+    justify-content:  space-evenly;
+    align-items: center;
+    background-color: aqua;
+    border-radius: 16px;
+}

@@ -15,6 +15,8 @@ function usarContexto(props) {
     favoritos: [],
   };
 
+  const [state, dispatch] = useReducer(Reducer, estadoInicial);
+
   // funcion de prueba:
   const saludar = (nombre) => {
     alert("Hola" + { nombre });
@@ -22,18 +24,30 @@ function usarContexto(props) {
   // reducer: es la función que se encarga de actualizar el estado.
   // recibe dos parametros, el  estado anterior y el acction dispatched:
 
-  const [state, dispatch] = useReducer(Reducer, estadoInicial);
-
   // buscar la lista  de pokemones:
   const traemePokemones = async () => {
     const res = await axios.get("https://pokeapi.co/api/v2/pokemon/");
-
     dispatch({ type: "LISTAME_POKEMONES", payload: res.data.results });
+    favoritosRecuperados() 
   };
 
   // agregar a favorito:
   const guardamePokemon = (item) => {
     dispatch({ type: "GUARDAME_POKEMON", payload: item });
+    favoritosLocal();
+  };
+
+  const favoritosLocal = () => {
+    localStorage.setItem("favoritosLocal", JSON.stringify(state.favoritos));
+  };
+
+  const favoritosRecuperados = () => {
+    let favoritosRecuperados = JSON.parse(localStorage.getItem("favoritosLocal"));
+  if(favoritosRecuperados > 0 ){
+    favoritos = favoritosRecuperados;
+  }
+  console.log("favoritos recuperados: ", favoritosRecuperados);  
+
   };
 
   // eliminar del favorito:
@@ -41,10 +55,8 @@ function usarContexto(props) {
     const nuevoArreglo = state.favoritos.filter(
       (itemActual) => itemActual.id !== item.id
     );
-
     dispatch({ type: "ELIMINADE_FAVORITOS", payload: nuevoArreglo });
-
-    console.log('este es el id: ', item.id)
+    favoritosLocal();
   };
 
   return (
@@ -56,6 +68,8 @@ function usarContexto(props) {
         eliminaDeFavoritos,
         pokemones: state.pokemones,
         favoritos: state.favoritos,
+        favoritosLocal,
+        favoritosRecuperados,
       }}
     >
       {" "}
