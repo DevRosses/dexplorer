@@ -5,8 +5,9 @@ function Footer() {
   return (
     <>
       <footer className="footer">
-        <Link to="/">Home</Link> |<Link to="/pokemones">Pokemones</Link> |
-        <Link to="/favoritos">Favoritos</Link>
+        <Link className='text-link' to="/">Home</Link> 
+        <Link className='text-link' to="/pokemones">Pokemones</Link> 
+        <Link className='text-link' to="/favoritos">Favoritos</Link>
       </footer>
     </>
   );

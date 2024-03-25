@@ -1,12 +1,5 @@
 #root {
-  min-width: var(--layoutWidth);
-  height: 100vh;
-  margin: 0 auto;
-  text-align: center;
-  background: var(--backgroundApp);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width:  100%;  
 }
 
 

@@ -6,6 +6,7 @@ import Pokemon from '../componentes/Pokemon'
 function Lista() {
     const { pokemones, traemePokemones } = useContext(Contexto)
 
+
     useEffect(
         () => {
             traemePokemones( );

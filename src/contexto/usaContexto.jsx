@@ -31,6 +31,7 @@ function usarContexto(props) {
     favoritosRecuperados() 
   };
 
+
   // agregar a favorito:
   const guardamePokemon = (item) => {
     dispatch({ type: "GUARDAME_POKEMON", payload: item });

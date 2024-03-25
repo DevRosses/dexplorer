@@ -1,10 +1,43 @@
-.favorito{
-    width: 157px;
+.favorito {
+    width: 158px;
     height: 162px;
     display: flex;
     flex-direction: column;
-    justify-content:  space-evenly;
     align-items: center;
-    background-color: aqua;
-    border-radius: 16px;
-}
+    justify-content: center;
+    margin: 24px 0px;
+  }
+  
+  .img-card {
+    height: 124px;
+    position: relative;
+    top: 70px; 
+  }
+  .yellow {
+    width: 158px;
+    height: 70px;
+    background: var(--backgroundCards);
+    padding: 5px 10px;
+    border-radius: 20px 20px 0px 0px;
+  }
+  .nombre-pokemon {
+    display: flex;
+    width: 158px;
+    height: 28px;
+    padding: 5px 10px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0px 0px 20px 20px;
+    background: #fff;
+  }
+  
+  .fav {
+    height: 32px;
+    cursor: pointer;
+  }
+
+  .text-link {
+    color: inherit;
+    text-decoration: inherit;
+  }
+  
